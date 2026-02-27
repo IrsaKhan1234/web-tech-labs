@@ -2,15 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <style>
+        /* Consistent Theme */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #6366f1, #a855f7, #ec4899, #f43f5e);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Nav Card Container */
+        .nav-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 { color: white; margin-bottom: 20px; font-weight: 500; }
+
+        /* Horizontal Menu Layout */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav a:hover {
+            background: white;
+            color: #ec4899;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .home-link {
+            display: block;
+            margin-top: 25px;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        .home-link:hover { color: white; }
+    </style>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="profile.html">Home (Profile)</a></li>
-        <li><a href="schedule.html">My Schedule</a></li>
-        <li><a href="https://www.uetpeshawar.edu.pk/" target="_blank">UET Website</a></li>
-    </ul>
-</nav>
+
+    <div class="nav-card">
+        <h2>Quick Navigation</h2>
+        <nav>
+            <ul>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+        </nav>
+        <a href="../index.html" class="home-link">Return to Main Homepage</a>
+    </div>
+
 </body>
 </html>
