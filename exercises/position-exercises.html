@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3: Positioning Challenge</title>
+    <link rel="stylesheet" href="../styles/position.css">
+</head>
+<body>
+
+<nav class="fixed-nav">
+    I am a Fixed Header - I never move!
+</nav>
+
+<div class="content-wrapper">
+    <aside class="sticky-sidebar">
+        <h3>Sticky Sidebar</h3>
+        <p>Scroll down to see me stick!</p>
+    </aside>
+
+    <main class="scrolling-text">
+        <h2>Main Content Area</h2>
+        <p>We are going to add a lot of text here so you can scroll...</p>
+        <p style="height: 1500px; background: linear-gradient(#fff, #ddd);">
+            Scroll down to see how the Sidebar and Nav behave!
+        </p>
+    </main>
+</div>
+
+<div class="absolute-modal">
+    <h3>Modal Popup</h3>
+    <p>I am absolutely positioned!</p>
+    <button onclick="this.parentElement.style.display='none'">Close Me</button>
+</div>
+
+</body>
+</html>

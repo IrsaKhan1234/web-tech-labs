@@ -1,0 +1,33 @@
+.mag-container {
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+    /* 4-column layout for desktop */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "head head head head"
+        "feat feat feat side"
+        "feat feat feat side"
+        "sub1 sub1 sub2 sub2"
+        "foot foot foot foot";
+}
+
+.mag-header { grid-area: head; background: #333; color: white; padding: 20px; }
+.featured { grid-area: feat; background: #fff; border: 1px solid #ddd; padding: 20px; }
+.mag-sidebar { grid-area: side; background: #f9f9f9; padding: 15px; }
+.sub-story-1 { grid-area: sub1; background: #eee; padding: 15px; }
+.sub-story-2 { grid-area: sub2; background: #eee; padding: 15px; }
+.mag-footer { grid-area: foot; background: #333; color: white; text-align: center; }
+
+/* Task requirement: Simplified symmetric grid on tablet */
+@media (max-width: 1024px) {
+    .mag-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "head head"
+            "feat feat"
+            "sub1 sub2"
+            "side side"
+            "foot foot";
+    }
+}

@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The Parent Container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes logo to left, auth to right, links to center */
+    align-items: center; /* Vertically centers everything */
+    background-color: #2c3e50;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+/* The Link List */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Modern way to add space between items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+.login-btn {
+    background-color: #d4af37;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Responsive Mobile View --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stacks everything vertically */
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stacks the links vertically */
+        align-items: center;
+        width: 100%;
+    }
+}

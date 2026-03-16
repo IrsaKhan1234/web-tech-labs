@@ -1,0 +1,31 @@
+/* General Styling for visibility */
+body { margin: 0; font-family: sans-serif; text-align: center; font-weight: bold; }
+header, footer { background: #2c3e50; color: white; padding: 20px; }
+.sidebar-left { background: #d4af37; padding: 20px; }
+.sidebar-right { background: #f4f4f4; padding: 20px; }
+.main-content { background: white; padding: 40px; min-height: 300px; }
+
+/* --- Method 3: CSS Grid (The Cleanest Way) --- */
+.hg-grid {
+    display: grid;
+    /* Defines a 3-column layout: sidebars are 200px, content takes the rest */
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.hg-grid header, .hg-grid footer {
+    grid-column: 1 / span 3; /* Spans across all 3 columns */
+}
+
+/* Responsive: Stacks on Mobile */
+@media (max-width: 768px) {
+    .hg-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .hg-grid header, .hg-grid footer {
+        grid-column: 1;
+    }
+}

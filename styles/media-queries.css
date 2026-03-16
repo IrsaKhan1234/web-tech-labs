@@ -1,0 +1,12 @@
+body { text-align: center; transition: background 0.5s; }
+.msg::after { content: " Mobile Screen"; color: red; }
+
+@media (min-width: 768px) {
+    body { background: lightblue; }
+    .msg::after { content: " Tablet Screen"; color: blue; }
+}
+
+@media (min-width: 1024px) {
+    body { background: lightgreen; }
+    .msg::after { content: " Desktop Screen"; color: green; }
+}

@@ -1,0 +1,6 @@
+.form-wrapper { max-width: 600px; margin: auto; padding: 20px; background: #f9f9f9; }
+.flex-form { display: flex; flex-wrap: wrap; gap: 15px; }
+.field { flex: 1 1 250px; display: flex; flex-direction: column; }
+.field.full { flex: 1 1 100%; }
+input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+button { background: #2c3e50; color: white; padding: 10px 20px; border: none; cursor: pointer; }
